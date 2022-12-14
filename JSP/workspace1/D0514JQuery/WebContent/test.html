@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<style type="text/css">
+	  *{font-size:20pt; font-weight:bold;  font-family: Comic Sans MS ; margin-left: 10px; }
+	  a{font-size:20pt; text-decoration:none; font-weight:bold; color:blue;  font-family: Comic Sans MS ; }
+	  a:hover{font-size:24pt; text-decoration:underline; color:green;  font-family: Comic Sans MS ; }
+	  .image{ width:150px; height:100px; float:left; list-style:none; margin:0px; padding:0px;}
+	  .image li{ width:100px; height:100px; padding:5px 10px;}
+	  .image img{ width:100px; height:100px;}
+	  .view{width:700px;height:300px}
+	  .view img{width:500px;height:320px}
+	  
+</style>
+<script src=https://code.jquery.com/jquery-3.4.1.min.js></script>
+
+</head>
+<body background="green">
+	<div class="view">
+		<img alt="" src="images/2.jpg" id="taget">
+	</div>
+	<ul class="image">
+		<li><a href="images/1.jpg" ><img src="images/1.jpg"></a></li>
+		<li><a href="images/2.jpg" ><img src="images/2.jpg"></a></li>
+		<li><a href="images/3.jpg" ><img src="images/3.jpg"></a></li>
+	</ul>
+	
+</body>
+<script>
+	$(function () {
+		$(".image>a").click(function () {
+			var path=$(this).attr("href");
+			$(".view>img").attr({src:path,alt:'그림무'}).css('opacity','0.5').stop();
+			return false;
+		});
+	});
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>여러 선택자 조합</title>
+    <style>
+        /*후손(자손) 선택자*/
+        ul strong {color:dodgerblue;}
+        /*자식(=직계자식) 선택자*/
+        div > strong {background:yellow;}
+        p strong {color:red;}
+        p > strong {color:blue;}
+        /*형재 선택자*/
+        h3 + p{font-style:italic;}
+        /*가상 선택자*/
+        a:link{color:brown; font-size:24px; text-decoration:none;}
+        a:visited{color:brown; font-size:24px; text-decoration:none;}
+        a:hover{color:yellow;}
+        a:active{color:beige;}
+        h3:hover{background:blue;}
+        h3:before{content:"★"; color:blue;}
+        h3:after{content:"(sblim)"; font-size:30px;}
+        h3:active{background:green;}
+
+        h3:first-letter{color:red; font-size:50px; background:blue;}
+        li:nth-child(even){color:cornsilk;}
+    </style>
+</head>
+<body>
+    <h3>Web Programming</h3>
+    <hr>
+    <div>
+        <div><strong>학습</strong>내용</div>
+        <ul>
+            <li>HTML5</li>
+            <li><strong>CSS</strong></li>
+        </ul>
+        <div>60점 미만은 F</div>
+    </div>
+    <h3><strong>스타일 시트</strong>이해하기</h3>
+    <p>이 예제는 <strong>css의</strong> 개념 이해합니다.</p>
+    <p>다음 <strong>css속성</strong> 예제로 이동합니다.</p>
+
+    <h3>자주가는 사이트</h3>
+    <ul>
+        <li><a href="http://www.naver.com">네이버</a></li>
+        <li><a href="http://www.daum.net">다음</a></li>
+    </ul>
+
+</body>
+</html>

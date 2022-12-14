@@ -1,0 +1,1 @@
+insert into list values('admin','1234','1','none',1);

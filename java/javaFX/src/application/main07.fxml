@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <AnchorPane prefHeight="82.0" prefWidth="554.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutY="64.0" prefHeight="23.0" prefWidth="554.0" spacing="10.0">
+               <children>
+                  <Label text="IP" />
+                  <TextField />
+                  <Label layoutX="10.0" layoutY="10.0" text="Port" />
+                  <TextField layoutX="21.0" layoutY="10.0" prefHeight="23.0" prefWidth="85.0" />
+                  <Label layoutX="159.0" layoutY="10.0" text="Debug" />
+                  <TextField disable="true" layoutX="183.0" layoutY="10.0" prefHeight="23.0" prefWidth="148.0" promptText="Debug" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="222.0" prefHeight="55.0" prefWidth="115.0" spacing="10.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" selected="true" text="TCP">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="protocol" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="UDP" toggleGroup="$protocol">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="339.0" prefHeight="54.0" prefWidth="218.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="77.0" text="Start" />
+                  <Button disable="true" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="60.0" text="Stop" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutY="4.0" prefHeight="46.0" prefWidth="222.0" spacing="10.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" selected="true" text="Server">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="sc" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <CheckBox mnemonicParsing="false" text="Echo">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </CheckBox>
+                  <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Cilent" toggleGroup="$sc">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </RadioButton>
+                  <CheckBox layoutX="67.0" layoutY="10.0" mnemonicParsing="false" text="Rcv">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" />
+         </padding>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="66.0" prefWidth="554.0" spacing="10.0" BorderPane.alignment="BOTTOM_CENTER">
+         <children>
+            <Label text="sleepTime(msc)" />
+            <TextField prefHeight="23.0" prefWidth="97.0" />
+            <Label layoutX="10.0" layoutY="10.0" text="Count" />
+            <TextField layoutX="101.0" layoutY="10.0" prefHeight="23.0" prefWidth="58.0" />
+            <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="55.0" text="Send" />
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
+   </bottom>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="TOP_CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="File1" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="File2" />
+            <Button layoutX="10.0" layoutY="65.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="File3" />
+            <Button layoutX="10.0" layoutY="120.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="File4" />
+            <Button layoutX="10.0" layoutY="175.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="100.0" text="File5" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView prefHeight="289.0" prefWidth="454.0">
+              <columns>
+                <TableColumn prefWidth="39.0" text="No" />
+                <TableColumn prefWidth="81.0" text="Up/Down" />
+                  <TableColumn prefWidth="81.0" text="IP" />
+                  <TableColumn prefWidth="69.0" text="Port" />
+                  <TableColumn prefWidth="183.0" text="Massge" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

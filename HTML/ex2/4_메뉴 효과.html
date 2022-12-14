@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>메뉴 효과 </title>
+    <style>
+        #navi ul{
+            position: absolute;
+            background-color:#faecc5;
+            margin:0;
+            padding:0;
+            border-radius:10px;
+        }
+        #navi ul>li{
+            float:left;
+            list-style:none;
+            padding:10px;
+            margin:0px;
+            border-radius:3px;
+            transition:all 1.2s ease;
+        }
+        #navi ul>li:hover{
+            background-color:#ffbb00;
+            transform:rotate(10deg);
+        }
+        a{
+            text-decoration: none;
+            display:block;
+            color:#111;
+            z-index:99;
+        }
+    </style>
+</head>
+<body>
+  <h1>메뉴</h1>
+	<div id="navi">
+	  <ul>
+          <li><a href=""> 이런아이티</a></li>
+          <li><a href=""> 이런육아</a></li>
+          <li><a href=""> 이런여행</a></li>
+          <li><a href=""> 이런맛집</a></li>
+          <li><a href=""> 이런책</a></li>    
+          <li><a href=""> 이런말말말</a></li>
+        
+      </ul>
+	</div>
+</body>
+</html>

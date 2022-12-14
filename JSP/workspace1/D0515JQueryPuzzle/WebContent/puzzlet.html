@@ -1,0 +1,70 @@
+<HTML>
+<HEAD>
+
+<script type="text/javascript">
+    //var  flag=false;
+	var sunsu = new Array( );
+	var temp = 1;
+	var src="images/";
+	var imgsource1 = new Array("1.gif", "2.gif", "3.gif", "4.gif", "5.gif", "6.gif", "7.gif","8.gif",
+			"9.gif", "10.gif", "11.gif", "12.gif", "13.gif", "14.gif", "15.gif", "blink.gif") ;
+	var blink = 0;
+
+	function start( ) { //시작버튼클릭시 호출되는 함수
+		 for(a=0; a<16 ; a++){
+	          sunsu[a] = Math.round(Math.random()*15); //난수 
+	       for(b=0 ; b<a ; b++){
+	        if( sunsu[a] ==  sunsu[b]) {  a--;  } //중복체크 
+	        }// for b end 
+        } //for a end
+
+		mix( );  //그림섞기
+	}//end
+
+
+	function  mix( ){
+		for(i=0; i<16; i++) {
+		   document.images[i].src = src+imgsource1[sunsu[i]];
+		   if (sunsu[i]==15) blink = i;
+		} 
+	}// mix end
+
+
+	function move(k) {  //  이동
+		console.log(blink);
+		var cha=Math.abs(blink-k);
+		if(cha==1||cha==4||cha==-1||cha==-4){
+			temp=sunsu[k];
+			sunsu[k]=sunsu[blink];
+			sunsu[blink]=temp;
+			mix();
+		}
+	}// move end
+
+	function bingo( ){  
+		
+	}// bingo end
+</script>
+</head>
+
+<body>
+<font  size=7  color=green> <b> 퍼즐게임 </b></font><br>
+<form>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input id="btn_name" type = "button" value = "  시&nbsp;&nbsp;&nbsp;&nbsp;작  " 
+	 onClick = "start( )"   style="font-size:24pt; font-style:bold; " > <p>
+</form>
+
+<script type="text/javascript">
+	src="images/";
+	imgsource = new Array("1.gif", "2.gif", "3.gif", "4.gif", "5.gif", "6.gif", "7.gif", "8.gif",
+			"9.gif", "10.gif", "11.gif", "12.gif", "13.gif", "14.gif", "15.gif", "16.gif") ;
+
+	for (i =0 ; i<16 ; i++){
+	  document.write("<img src="+src+ imgsource[i] + " border = 1 onClick = 'move(" + i + ")'>") ;
+	  if (((i+1)%4)==0) document.write("<br>") ;
+	}
+</script>
+</body>
+</html>
+

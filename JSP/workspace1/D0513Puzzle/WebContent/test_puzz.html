@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+function move(i) {
+		
+}
+
+function click(){
+		
+	
+	
+}
+	
+</script>
+</head>
+<body>
+<form action="">
+	<input value="버튼" type="button" onclick="click">
+</form>
+	<script type="text/javascript">
+	src="images/";
+	img=new Array(16);		
+		for(i=0; i<16; i++){
+			img.push(src+i+1+".gif");
+			document.write("<img src="+img[i]+"border=1 onClick='move("+i+")' alt='이미지'>");
+			
+			if((i+1)%4==0){
+				document.write("<br>");
+			}
+		}
+	</script>	
+</body>
+</html>

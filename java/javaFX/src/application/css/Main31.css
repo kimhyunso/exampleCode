@@ -1,0 +1,26 @@
+/* comment */
+
+Label {
+	-fx-background-color:green;
+	-fx-text-fill:red;
+	-fx-font-size:30;
+	-fx-padding:5;
+}
+
+.myLabel{
+	-fx-background-color:#ABCDEF;
+	-fx-text-fill:#FFFF00;
+	-fx-font-size:20;
+}
+
+#myID{
+	-fx-background-color:#FF00FF;
+	-fx-text-fill:#000000;
+	-fx-font-size:15;
+}
+
+#test{
+	-fx-background-color:#FF00FF;
+	-fx-text-fill:#FFFFFF;	
+	-fx-font-size:12;
+}

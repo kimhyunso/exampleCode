@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main14ButtonController">
+   <children>
+      <VBox layoutX="-3.0" layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="137.0" prefWidth="501.0" spacing="20.0">
+               <children>
+                  <Button fx:id="okButton" mnemonicParsing="false" onAction="#handleOkAction" prefHeight="54.0" prefWidth="140.0" text="OK" />
+                  <Button contentDisplay="CENTER" layoutX="10.0" layoutY="37.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="151.0">
+                     <graphic>
+                        <ImageView fitHeight="44.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../image/naver.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="133.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <CheckBox fx:id="reading" mnemonicParsing="false" text="독서" />
+                  <CheckBox fx:id="gamming" mnemonicParsing="false" selected="true" text="게임" />
+                  <CheckBox fx:id="sleeping" mnemonicParsing="false" text="잠자기" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="131.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <TextArea fx:id="display" prefHeight="81.0" prefWidth="408.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextArea>
+                  <RadioButton fx:id="tcp" mnemonicParsing="false" text="TCP">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="protocol" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="udp" mnemonicParsing="false" selected="true" text="UDP" toggleGroup="$protocol" />
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

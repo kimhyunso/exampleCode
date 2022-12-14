@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>z-index, visibility </title>
+    <style>
+     /*z-index : 겹치는 순서변경*/
+        .z1 {width:200px;
+             height:200px;
+             background-color:aqua;
+             z-index:2;
+             position:absolute;
+             top:50px;
+             left:50px;
+        }
+        .z2 {width:200px;
+             height:200px;
+             background-color:bisque;
+             z-index:3;
+             position:absolute;
+             top:100px;
+             left:150px;
+        }
+        .z3 {width:200px;
+             height:200px;
+             background-color:blueviolet;
+             z-index:1;
+             position:absolute;
+             top:50px;
+             left:100px;
+        }
+        
+    /* visibility : 보이기/숨기기 */
+        .v1 { width:200px;
+              height:200px;
+              background-color:red;
+              position:absolute;
+              top: 400px;
+              float:left;}
+        
+        .v2 { width:200px;
+              height:200px;
+              background-color:blue;
+              position:absolute;
+              top: 400px;
+              left:200px;
+              float:left;
+              /*visibility: hidden; */
+              display:none;
+        }
+        
+        .v3 { width:200px;
+              height:200px;
+              background-color:green;
+              position:absolute;
+              top: 400px;
+              float:left;}
+        
+        
+        
+        
+    
+    </style>
+</head>
+<body>
+    <h3> z-index, visibility ... </h3>
+    <hr>
+    <div class="z1"> 박스1</div>
+    <div class="z2"> 박스2</div>
+    <div class="z3"> 박스3</div>
+    
+    <div class="v1"> 박스4</div>
+    <div class="v2"> 박스5</div>
+    <div class="v3"> 박스6</div>
+    
+</body>
+</html>    

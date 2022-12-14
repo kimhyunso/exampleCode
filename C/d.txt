@@ -1,0 +1,28 @@
+
+insert i
+insert i
+insert i
+insert i
+insert i
+insert i
+insert i
+append a
+next line o
+line cpy yyp clibord
+paist p
+append a
+next line o
+line cpy yyp clibord
+paist p
+append a
+next line o
+line cpy yyp clibord
+paist p
+append a
+next line o
+line cpy yyp clibord
+paist p
+append a
+next line o
+line cpy yyp clibord
+paist p

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="296.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label style="-fx-background-color: #FFFF00; -fx-text-fill: #FF0000; -fx-font-size: 15;" text="첫번째 Label 입니다." />
+      <Label style="-fx-background-color: #00FFFF; -fx-text-fill: #FFFFFF; -fx-font-size: 20;" text="두번째 Label 입니다." />
+      <Label style="-fx-background-color: #0000FF; -fx-text-fill: #FFFFFF; -fx-padding: 15;" text="세번째 Label 입니다." />
+   </children>
+</HBox>

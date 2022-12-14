@@ -1,0 +1,6 @@
+@charset "UTF-8";
+table{ border: 1px solid #444444; margin-top:50px;}
+td{padding:5px;}
+#reg{text-decoration: none; text-align: center; background-color:#A6A6A6; color:white;  border: thin;}
+#job{width:150px; text-align:center;}
+#footer a{text-decoration:none; color:#6799FF;}

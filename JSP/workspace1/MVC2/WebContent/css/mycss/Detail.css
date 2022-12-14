@@ -1,0 +1,12 @@
+@charset "UTF-8";
+#detail table{border-collapse:collapse; margin-top:50px;}
+#detail td {border-bottom: 1px solid #444444; padding: 10px;}
+#detail #td{border-bottom:none;}
+#detail #img{border-bottom:none; margin:50px;}
+#detail #td input{ margin:10px; background-color:#A6A6A6; width:100px;font-size:15px; text-decoration: none; text-align:center;  border: thin;}
+font {font-family:'dotum';}
+#detail #font{margin:100px;}
+#detail #su input{width:30px; text-align:center; margin-left: 130px;}
+#detail #font select{width:100px; margin-left:30px;}
+#detail #myform button{border: thin; text-decoration: none; text-align:center; width:30%; font-size:15px; background-color:#A6A6A6;}
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+ <style type="text/css">
+	  *{font-size:20pt; font-weight:bold;  font-family: Comic Sans MS ; margin-left: 10px; }
+	  a{font-size:20pt; text-decoration:none; font-weight:bold; color:blue;  font-family: Comic Sans MS ; }
+	  a:hover{font-size:24pt; text-decoration:underline; color:green;  font-family: Comic Sans MS ; }
+   </style>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	//$("#frist").css(function(){
+		//$("#frist").css("color","blue");
+		//$("#frist").css("background-color","yellow");
+		//$("#frist").css("font-size","30px");
+	// });
+ //$("#mylist li").css("border" ,"5px soild pink");
+ //$(".frist").prevAll().css("border" ,"5px soild pink");
+ //$(".frist").nextAll().css("border" ,"5px soild pink");
+ 
+ //$(".second").parents("border" ,"5px soild pink");
+ $(".second").parents.prev.css("border" ,"5px soild pink");
+});
+
+</script>
+<script src=https://code.jquery.com/jquery-3.4.1.min.js></script>
+</head>
+<body>
+	<div>
+	<ul id="mylist">
+		<li id="content1">내용1
+		<ul>
+			<li>내용</li>
+			<li>내용</li>
+			<li class="frist">내용 기준점 frist</li>
+			<li>내용</li>
+			<li>내용</li>
+		</ul>
+		</li>
+		<li id="content2">내용2
+		<ul>
+			<li>내용</li>
+			<li>내용</li>
+			<li class="second">내용 기준점 second</li>
+			<li>내용</li>
+			<li>내용</li>
+		</ul>
+		</li>
+		<li id="content3">내용3
+		<ul>
+			<li>내용</li>
+			<li>내용</li>
+			<li class="three">내용 기준점 three</li>
+			<li>내용</li>
+			<li>내용</li>
+		</ul>
+		</li>
+	</ul>	
+	</div>
+</body>
+</html>

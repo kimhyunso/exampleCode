@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <HBox id="hbox1" prefHeight="100.0" prefWidth="200.0" />
+      <HBox id="hbox2" prefHeight="100.0" prefWidth="200.0" />
+      <HBox id="hbox3" prefHeight="100.0" prefWidth="200.0" />
+      <HBox id="hbox4" prefHeight="100.0" prefWidth="200.0" />
+      <HBox id="hbox5" prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</HBox>

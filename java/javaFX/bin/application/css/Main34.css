@@ -1,0 +1,24 @@
+#hbox1{
+	-fx-background-color:rgba(255,0,0,0.5); /* ºûÀÇ »ï¿ø»ö RGB Èò»ö¿¡ °¡±î¿öÁü A´Â Alpha */
+}
+
+#hbox2{
+	-fx-background-color:linear-gradient(to top,#FF0000, #00FF00); 
+}
+
+#hbox3{
+	-fx-background-color:radial-gradient(center 50% 50%, radius 50%, #FF00FF, #FFADEC); 
+}
+
+#hbox4{
+	-fx-border-color:#FF0000;
+	-fx-border-radius:20;
+	-fx-background-image:url("../image/new.gif"); 
+}
+
+#hbox5{
+	-fx-border-color:#FF0000;
+	-fx-border-radius:20;
+	-fx-background-image:url("../image/apple.jpg"); 
+    -fx-background-repeat:no-repeat;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+
+ <style type="text/css">
+	  *{font-size:20pt; font-weight:bold;  font-family: Comic Sans MS ; margin-left: 10px; }
+	  a{font-size:20pt; text-decoration:none; font-weight:bold; color:blue;  font-family: Comic Sans MS ; }
+	  a:hover{font-size:24pt; text-decoration:underline; color:green;  font-family: Comic Sans MS ; }
+   	#form{float:left;border-right-width:10px;}
+   	#form input{}
+   </style>
+<script src=https://code.jquery.com/jquery-3.4.1.min.js>
+</script>
+
+<script type="text/javascript">
+var date=new Date();
+ jQuery(document).ready(function(){
+	 $("#asp").click(function(){
+		$("#asp").text(date); 
+		$("#asp").css("color","blue");
+		$("#asp").css("background-color","yellow");
+		$("#asp").css("font-size","30px");
+	 });
+ });
+ $(document).ready(function(){
+	 $("#jsp").click(function(){
+		$("#jsp").text("test"); 
+		$("#jsp").css("color","blue");
+		$("#jsp").css("background-color","yellow");
+		$("#jsp").css("font-size","30px");
+	 });
+ });
+ $(document).ready(function(){
+	 $("#php").click(function(){
+		$(this).text("test 3:30"); 
+		$(this).css("color","blue");
+		$(this).css("background-color","yellow");
+		$(this).css("font-size","30px");
+	 });
+ });
+
+ $(document).ready(function(){
+	 $("#button").click(function(){
+		$("#button").alert("test"); 
+	 });
+ });
+
+</script>
+</head>
+<body>
+	<div id="asp">
+		asp
+	</div>
+	<div id="jsp">
+		jsp
+	</div>
+	<div id="php">
+		php
+	</div>
+	
+	<form id="form">
+	제목 : <input type="text" id="title" value="content">	
+	<input type="button" id="button" value="보내기">
+	</form>
+</body>
+</html>

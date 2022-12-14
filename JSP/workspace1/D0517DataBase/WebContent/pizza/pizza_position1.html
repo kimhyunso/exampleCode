@@ -1,0 +1,52 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>[pizza_position탐탐1.html]</title>
+<style type="text/css">
+	*{ font-size:16pt; font-weight:bold; }
+
+	.box {
+	  display: inline-block;
+	  width: 100px;
+	  height: 100px;
+	  background: red;
+	  color: white;
+	}
+
+	#two {
+	  position: absolute;
+	  top: 25px;
+	  left: 50px;
+	  background: blue;
+	}
+</style>
+</head>
+<body>
+
+<hr>
+<div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div>
+
+
+<!--
+<font color=blue>static</font><br>
+기본값입니다. static이 지정된 요소는 document의 일반적인 흐름(normal flow)을 따라 배치됩니다. top, right, bottom, left, z-index 속성들이 static에서는 아무런 효과도 주지 못합니다. <p>
+
+<font color=blue>relative</font><br>
+ relative가 지정된 요소 역시 document의 일반적인 흐름(normal flow)을 따라 배치됩니다. 그리고 요소 자신에 대한 상대적인 top, right, bottom, left 속성에 의한 좌표로 배치됩니다. (relative는 별도의 거리 속성을 주지 않으면 static과 동일하게 동작합니다.)이때 요소의 좌표는 다른 요소들의 위치에 영향을 주지 않습니다. 따라서, 페이지 레이아웃에서 요소에게 지정된 공간은 static일 때와 동일합니다. relative는 z-index의 값이 auto가 아닐 경우에 새로운 stacking context를 만듭니다. table-*-group, table-row, table-column, table-cell, table-caption 요소에 relative가 주는 효과는 정의되지 않았습니다.<p>
+
+<font color=blue>absolute</font><br>
+요소가 일반적인 문서(document) 흐름에서 제거됩니다. 페이지 레이아웃에서 요소에 대한 공간이 생성되지 않습니다. 대신, 가장 가까운 위치에있는 조상에 대해 상대적 위치로 배치됩니다. 그렇지 않으면 초기 컨테이닝 블록을 기준으로 배치됩니다. 최종 위치는 top, right, bottom, left 값에 의해 결정됩니다. 이 값은 z-index가 auto가 아닌 경우에 새로운 stacking context를 생성합니다. 절대적으로 배치된(positioned) 박스(box)들은 마진을 가질 수 있으며 다른 마진에 의해 망가지지 않습니다.<p>
+
+<font color=blue>fixed</font><br>
+요소가 일반적인 문서(document) 흐름에서 제거됩니다. 페이지 레이아웃에서 요소에 대한 공간이 생성되지 않습니다. 대신, 스크린의 '뷰포트(viewport)를 기준으로 한 위치'에 배치됩니다. 따라서 스크롤되어도 움직이지 않는 고정된 자리를 갖게 됩니다. top, right, bottom, left 값에 의해 최종 위치가 결정됩니다. 이 값은 항상 새로운 stacking context를 생성합니다. 조상의 transform 속성이 none이 아닌 다른 것으로 설정되면, 그 조상은 뷰포트 대신에 컨테이너로 사용됩니다(CSS Transforms Spec). 인쇄된 문서(document)의 경우, 모든 페이지에서 요소가 동일한 위치에 배치됩니다.<p>
+
+<font color=blue>sticky</font><br>
+요소가 일반적인 문서(document) 흐름에 따라 배치됩니다. 그런 다음 top, right, bottom, left 값을 기준으로 플로우 루트(flow root) 및 해당 요소를 포함하는 블록(containing block)에 대한 상대적(relative) 위치에 자리하게 됩니다. 이 오프셋은 다른 요소들에 영향을 주지 않습니다. 이 값은 항상 새로운  stacking context를 생성합니다. 테이블과 관련된 요소들에 미치는 sticky의 효과는 relative와 동일합니다. 브라우저 사양에 따라 overflow : hidden 또는 auto 요소 내에서 작동하지 않을 수 있습니다<p>
+-->
+</body>
+</html>

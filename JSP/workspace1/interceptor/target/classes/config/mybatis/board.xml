@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="board">	
+
+	<insert id="add">
+	  insert into hobby(hobby_idx,name,title,content,gender,hobby,img_file_name)
+	  values(hobby_seq.nextval, #{name}, #{title},#{content},#{gender}, #{hobby}, #{img_file_name} )
+	</insert>
+	
+	<delete id="del" parameterType="int">
+	    delete from  hobby where hobby_idx = #{hobby_idx} 
+	</delete>
+	
+	<select id="countAll" resultType="int">
+	     select count(*)  from hobby 
+	</select>
+	
+	<select id="selectAll" parameterType="pdto" resultType="dto">
+		select h.*,(select count(*) from hobby_reply r where r.hobby_idx=h.hobby_idx) as cnt from 
+		(select rownum rn , v.*from (select *from hobby where ${skey} like '%' || #{sval} || '%' )v )h where rn between #{start} and #{end}
+	</select>
+	
+	<select id="selectss" parameterType="pdto" resultType="dto">
+		select h.*,(select count(*) from hobby_reply r where r.hobby_idx=h.hobby_idx) as cnt from 
+		(select rownum rn , v.*from (select *from hobby where ${skey} like '%' || #{sval} || '%' or ${sskey} like '%' || #{sval} || '%')v )h where rn between #{start} and #{end}
+	</select>
+	
+	<select id="selectOne" resultType="dto">
+		select *from hobby where hobby_idx = #{hobby_idx}
+	</select>
+	
+</mapper>

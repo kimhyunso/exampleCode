@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>가로 메뉴 </title>
+        <style>
+            body, ul {
+                margin:0;
+                padding:0;
+            }
+            ul {list-style:none;}
+            a {text-decoration: none;}
+            
+            /* 주메뉴=드롭다운메뉴*/
+            .dropdownmenu > li {
+                float: left;
+                position : relative;
+                background: #67b0d1;
+                width:25%;
+            }
+            .dropdownmenu > li > a {
+                display:block;
+                font-size: 16px;
+                color:#fff;
+                text-align:center;
+                height: 60px;
+                line-height: 60px;                
+            }
+            .dropdownmenu > li:hover {
+                background:#7bbbd7;
+                
+            }
+            .dropdownmenu > li:hover > ul {
+                top: 60px;
+                left:0;
+            }
+            
+            /* 서브메뉴 */ 
+            .dropdownmenu ul {
+                position : absolute;
+                top:-999px;
+                z-index : 999;
+                width: 140px;
+                border: 1px solid #ccc;
+            }
+            
+            .dropdownmenu ul a {
+                display:block;
+                color: #aaa;
+                font-size : 12px;
+                line-height: 40px;
+                background: #fff;
+                padding-left: 20px; 
+            }
+            
+            .dropdownmenu ul a:hover{
+                color :#fff;
+                background: #67b0d1;
+            }
+        
+        
+        
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul class="dropdownmenu">
+                <li><a href="#"> Home</a></li>
+                <li><a href="#">Services</a>
+                    <ul>
+                        <li><a href="#"> HTML5</a></li>
+                        <li><a href="#"> CSS3 </a></li>
+                    </ul>                   
+                </li>
+                <li> <a href="#"> About</a></li>
+                <li><a href="#"> Contact</a></li>           
+            
+            </ul>
+        
+        
+        
+        </div>
+    
+    
+    </body>
+</html>

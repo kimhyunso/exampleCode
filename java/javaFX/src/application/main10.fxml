@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main10EventController">
+   <children>
+      <HBox alignment="CENTER" layoutX="5.0" layoutY="351.0" prefHeight="44.0" prefWidth="591.0" spacing="20.0">
+         <children>
+            <TextField fx:id="name" focusTraversable="false" onAction="#hadleEnter" prefHeight="23.0" prefWidth="112.0" promptText="Name" />
+            <TextField fx:id="text" layoutX="26.0" layoutY="21.0" onAction="#hadleEnter" prefHeight="23.0" prefWidth="560.0" />
+         </children>
+         <padding>
+            <Insets left="5.0" right="10.0" />
+         </padding>
+      </HBox>
+      <TextArea fx:id="scrollPane" layoutX="22.0" layoutY="19.0" prefHeight="329.0" prefWidth="555.0" />
+   </children>
+</AnchorPane>

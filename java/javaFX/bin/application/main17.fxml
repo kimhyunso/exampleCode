@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main17TestController">
+   <children>
+      <HBox prefHeight="27.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label text="제   목" />
+            <TextField fx:id="title" prefHeight="23.0" prefWidth="289.0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label text="작성자" />
+            <TextField fx:id="reader" />
+            <Label layoutX="10.0" layoutY="10.0" text="성별" />
+            <RadioButton fx:id="man" mnemonicParsing="false" selected="true" text="남자">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="woman" layoutX="208.0" layoutY="10.0" mnemonicParsing="false" text="여자" toggleGroup="$gender" />
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="37.0" prefHeight="27.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label text="날   짜" />
+            <DatePicker fx:id="day" />
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="64.0" prefHeight="27.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Label text="나  이" />
+            <Slider fx:id="age" majorTickUnit="10.0" prefHeight="41.0" prefWidth="526.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+         </children>
+      </HBox>
+      <TextArea fx:id="display" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="ok" mnemonicParsing="false" onAction="#handleOKAction" text="OK" />
+   </children>
+</VBox>

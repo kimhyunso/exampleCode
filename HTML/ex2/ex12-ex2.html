@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 한장으로 풀스크린</title>
+    <style>
+        #fullpage{
+            width:100%;
+            background:url("images/bg2.jpg") no-repeat center;
+            background-size:cover;
+            height:1000px;
+        }
+        section a:link{
+            text-decoration:none;
+            position:absolute;
+            top:500px;
+            left:50%;
+            color:white;
+            border:1px solid #fff;
+            font-size:3em;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullpage">
+        <nav>
+            <a href="#">메뉴1</a>
+            <a href="#">메뉴2</a>
+        </nav>
+        <section>
+            <a href="#" class="nav-btn">사이트로 이동</a>
+        </section>
+    </div>
+</body>
+</html>

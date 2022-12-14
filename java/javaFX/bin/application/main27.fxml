@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="153.0" prefWidth="747.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main27FileController">
+   <children>
+      <Button mnemonicParsing="false" onAction="#handleFileOpenAction" prefHeight="61.0" prefWidth="119.0" text="File Open" />
+      <Button layoutX="251.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleFileSaveAction" prefHeight="61.0" prefWidth="119.0" text="File Save" />
+      <Button layoutX="315.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDirOpenAction" prefHeight="61.0" prefWidth="119.0" text="Dir open" />
+      <Button layoutX="380.0" layoutY="56.0" mnemonicParsing="false" onAction="#handlePopupAction" prefHeight="61.0" prefWidth="119.0" text="Popup" />
+      <Button layoutX="597.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDialogAction" prefHeight="61.0" prefWidth="119.0" text="Dialog" />
+   </children>
+</HBox>

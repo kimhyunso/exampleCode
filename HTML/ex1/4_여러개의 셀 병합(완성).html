@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+    <title> 여러개의 셀 병합  </title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <h3> rowspan실습 </h3>
+    <hr>
+    <table border="1" width="500">
+        <tr>
+         <td rowspan="3"> 아래줄합치기</td><td>1행 2열 </td>        
+        </tr>
+        <tr>
+         <td>2행 2열 </td>
+        </tr>
+        <tr>
+        <td>3행 2열 </td>
+        </tr>
+        <tr>
+        <td>4행 1열</td>
+        <td>4행 2열</td>
+        </tr>    
+    </table>
+    <h3> colspan 실습</h3>
+    <hr>
+    <table border="1" width="500">
+        <tr>
+            <td colspan="3"> 옆칸의 셀 합치기</td>
+        </tr>
+        <tr>
+            <td> 2행 1열</td> <td> 2행 2열</td> <td>2행 3열</td>
+        </tr>        
+</table>
+    <h3> col, colgroup 실습</h3>
+    <hr>
+    <table border="1" width="500" height="200">
+        <caption> colgroup연습</caption>
+        <colgroup>
+            <col>
+            <col span="2" style="background:skyblue;">
+            <col style="background:yellow;">        
+        </colgroup>
+        <tr>
+            <td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td></td><td></td><td></td>
+        </tr>    
+    </table>
+    
+    <h3> 이력서 양식 </h3>
+    <hr>
+    <table border="1" width="800" height="300">
+    <colgroup>
+        <col style="width:100px;">
+        <col style="width:300px;">
+        <col style="width:100px;">
+        <col style="width:300px;">
+    </colgroup>
+    <tr>
+        <th> 이름</th>
+        <td> </td>
+        <th>연락처</th>
+        <td> </td>        
+    </tr>
+    <tr>
+        <th> 주소</th>
+        <td colspan="3">  </td>        
+    </tr>
+    <tr>
+    <th> 자기소개</th>
+        <td colspan="3"> </td>        
+    </tr>
+    <tr>
+        <th> 경력사항</th>
+        <td></td>
+        <th> 경력사항</th>
+        <td> </td>
+    </tr>
+    
+    
+    
+    
+    
+    </table>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>

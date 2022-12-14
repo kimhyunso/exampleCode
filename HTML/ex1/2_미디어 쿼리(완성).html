@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 미디어 쿼리</title>
+        <style>
+            body {
+                background:url("images/bg0.jpg") no-repeat fixed;
+                background-size:cover;
+            }
+            /* 769~1024px일 경우 css */
+            @media screen and (max-width: 1024px){
+                body{ 
+                    background:url("images/bg1.jpg") no-repeat fixed;
+                    background-size :cover;
+                }
+
+            }
+            /* 321px~768px일 경우 css */
+            @media screen and (max-width:768px){
+                body {
+                    background:url("images/bg2.jpg") no-repeat fixed;
+                    background-size :cover;                 
+                }
+            }
+            
+            /*0~320px일경우 css */
+            @media screen and (max-width: 320px){
+                body {
+                    background:url("images/bg3.jpg") no-repeat fixed;
+                    background-size:cover;
+                }
+                    
+            
+            }
+            
+            
+        
+        
+        
+        </style>
+        
+        
+    </head>
+    <body>
+        <h1> 미디어 쿼리 테스트 </h1>
+    
+    
+    </body>
+
+</html>

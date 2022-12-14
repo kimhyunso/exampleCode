@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="87.0" layoutY="80.0" text="JavaFX World 한글">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Button layoutX="372.0" layoutY="140.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="142.0" text="JavaFX Button" textFill="#a82020" />
+      <Label layoutX="119.0" layoutY="219.0" text="아이디">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField layoutX="191.0" layoutY="214.0" />
+      <Label layoutX="106.0" layoutY="254.0" text="비밀번호">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <PasswordField layoutX="191.0" layoutY="252.0" />
+      <Button layoutX="233.0" layoutY="292.0" mnemonicParsing="false" text="로그인" />
+   </children>
+</AnchorPane>
