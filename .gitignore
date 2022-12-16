@@ -33,4 +33,4 @@
 hs_err_pid*
 /bin/
 /Servers/
-/.ipynb_checkpoints/
+.ipynb_checkpoints/
