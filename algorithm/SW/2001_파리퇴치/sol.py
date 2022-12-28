@@ -20,11 +20,11 @@ for tc in range(1, T+1):
     m[3][0]+m[3][1], m[3][1]+m[3][2], m[3][2]+m[3][3], m[3][3]+m[3][4]
     m[4][0]+m[4][1], m[4][1]+m[4][2], m[4][2]+m[4][3], m[4][3]+m[4][4]
     """
+    left = 0
+    right = 0
 
-    for col in range(N-M+2):
-        for row in range(N-M):
-            data += matrix[col][row]
-        result.append(data)
+    while True:
+        pass
 
     print(result)
 
