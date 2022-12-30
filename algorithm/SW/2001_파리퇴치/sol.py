@@ -10,9 +10,6 @@ for tc in range(1, T+1):
     result = []
     value = 0
 
-    for i in matrix:
-        print(i)
-
     """
     m[0][0]+m[0][1], m[0][1]+m[0][2],   m[0][2]+m[0][3], m[0][3]+m[0][4]
     m[1][0]+m[1][1], m[1][1]+m[1][2],   m[1][2]+m[1][3], m[1][3]+m[1][4]
@@ -22,14 +19,14 @@ for tc in range(1, T+1):
     
     m[4][0]+m[4][1], m[4][1]+m[4][2],   m[4][2]+m[4][3], m[4][3]+m[4][4]
     """
-    for m in range(N-1):
-        for row in range(N-M-1):
-            for col in range(N-M):
-                value += matrix[row][col]
-                result.append(value)
+    for row in range(N - M + 1):  # 0 ~ 3
+        for col in range(N - M + 1):  # 0 ~ 3
+            sub_sum = 0
+            for r in range(M):  # 0 ~ 1
+                for c in range(M):  # 0 ~ 1
+                    sub_sum += matrix[row + r][col + c]
+                    matrix.append(sub_sum)
 
-    for re in result:
-        print(re)
 
 
 
