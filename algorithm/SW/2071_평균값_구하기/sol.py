@@ -7,7 +7,7 @@ def solved(numbers):
     for number in numbers:
         result += number
 
-    return result = round(result / len(numbers))
+    return round(result / len(numbers))
 
 
 T = int(input())
