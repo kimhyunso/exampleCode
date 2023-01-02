@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Form</h1>
+    <!-- Form 제출양식 form => Block-->
+    <form action="">
+        <!-- input => inline -->
+        <div>
+            <!-- label은 inline -->
+            <!-- label은 input의 id와 맞춰야 한다. -->
+            <label for="my-name">이름: </label>
+            <input id="my-name" type="text" value="기존데이터" required autofocus>
+        </div>
+        <div>
+            <label for="my-email">eamil: </label>
+            <input id="my-email" type="email" placeholder="example@gamil.com">
+        </div>
+        <div>
+            <input type="password">
+        </div>
+        <div>
+            <label for="age">나이</label>
+            <input id="age" type="number">
+        </div>
+        <div>
+            <input type="checkbox" name="" id="" value="apple"> 사과
+            <input type="checkbox" name="" id="" value="banana"> 바나나
+            <input type="checkbox" name="" id="" value="strawberry"> 딸기
+        </div>
+        <div>
+            <input type="radio" name="gender" id="" value="male"> 남자
+            <input type="radio" name="gender" id="" value="female"> 여자
+        </div>
+        <div>
+            <textarea name="" id="" cols="30" rows="10">기존 내용</textarea>
+        </div>
+        <div>
+            <input type="submit" value="버튼">
+        </div>
+    </form>
+</body>
+</html>
