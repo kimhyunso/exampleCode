@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_block</title>
+    <style>
+        .inline-block{
+            display:inline-block;
+        }
+        .div1{
+            background-color:red;
+            width:30%;
+            color:white;
+        }
+        .div2{
+            background-color: blue;
+            width:30%;
+            color:white;
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- 
+        Block(박스)
+        1. 욕심이 많아서, 우측 남는 자리에 아무도 허락하지 않음
+        2. 기본적으로 height는 내부 content의 세로가 된다.
+    -->
+     <div class="div1 inline-block">
+        red
+     </div>
+     <div class="div2 inline-block">
+        blue
+     </div>
+
+</body>
+</html>
