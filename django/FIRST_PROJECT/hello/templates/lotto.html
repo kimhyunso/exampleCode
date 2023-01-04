@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Lotto</h1>
+
+{% if is_jackpot %}
+    <h2>당첨!!</h2>
+{% endif %}
+
+<h1>
+    <ul>
+        {% for lotto in  lottos%}
+            <li>{{ lotto }}</li>
+        {% endfor %}
+    </ul>
+</h1>
+{% endblock %}
