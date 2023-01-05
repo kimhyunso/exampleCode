@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}index{% endblock title %}
+
+{% include 'base.html' %}
+
+
+
+{% block content %}
+<h1>Review/Index</h1>
+<a href="{% url 'review:hello' %}">review/hello</a>
+{% endblock content %}
