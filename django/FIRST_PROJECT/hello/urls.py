@@ -1,8 +1,14 @@
+# hello / urls.py
+
 from django.urls import path
 from . import views
 
 urlpatterns = [
+    # FULL URL
+    # hello/world/ => views.py / hello_world
     path('world/', views.hello_world),
-    path('lunch/',views.lunch),
-    path('lotto/',views.lotto),
+    # hello/lunch/ => views.lunch
+    path('lunch/', views.lunch),
+    # hello/lotto/ => views.lotto
+    path('lotto/', views.lotto),
 ]

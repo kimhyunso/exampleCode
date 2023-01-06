@@ -1,5 +1,8 @@
+#!/bin/bash
+echo "directory name : "
+read directory
 echo "project name : "
 read name
-django-admin startproject $name
-`mkdir $name/templates`
-`touch $name/templates/base.html`
+`mkdir $directory ; django-admin startproject $name ./$directory`
+`mkdir $directory/templates`
+`touch $directory/templates/base.html`

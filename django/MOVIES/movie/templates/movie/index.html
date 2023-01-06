@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}
+INDEX
+{% endblock title %}
+
+{% include 'base.html' %}
+
+{% block content %}
+<form action="{% url 'movie:rank' %}" method="post">
+    {% csrf_token %}
+    <div>
+        <label for="name">Movie</label>
+        <input id="name" type="text" name="name">
+    </div>
+    <button type="submit">제출</button>
+    <button type="reset">취소</button>
+</form>
+{% endblock content %}
+
+
