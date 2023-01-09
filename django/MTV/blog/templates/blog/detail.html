@@ -1,0 +1,27 @@
+{% include 'base.html' %}
+
+{% block content %}
+
+
+<h1>{{ article.title }}</h1>
+
+<p>
+    {{ article.content }}
+    {{ article.writer }}
+    {{ article.create_at }}
+</p>
+
+<div>
+    <button onclick="location.href='{% url 'blog:index' %}';">목록</button>
+
+    <a href="{% url 'blog:edit' article.id %}">
+        <button>수정</button>
+    </a>
+    
+    <form action="{% url 'blog:delete' article.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="삭제">
+    </form>
+</div>
+
+{% endblock content %}
