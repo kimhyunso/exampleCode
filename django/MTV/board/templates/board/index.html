@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+    Index
+{% endblock title %}
+
+{% include 'base.html' %}
+{% block content %}
+<h1>List View</h1>
+<table>
+    <tr>
+        <td>title</td>
+        <td>content</td>
+        <td>writer</td>
+        <td>create_at</td>
+    </tr>
+
+    {% for list in lists %}
+        <tr>
+            <td>{{list.title}}</td>
+            <td><a href="{% url 'board:detail' list.pk %}">{{list.content}}</a></td>
+            <td>{{list.writer}}</td>
+            <td>{{list.create_date}}</td>
+        </tr>
+    {% endfor %}
+</table>
+<button onclick="location.href='{% url 'board:create' %}';">글쓰기</button>
+{% endblock content %}
+
+
+
+
+

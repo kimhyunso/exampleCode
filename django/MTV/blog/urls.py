@@ -14,15 +14,12 @@ urlpatterns = [
     path('create/', views.create, name='create'),
     
     # blog/delete/
-    path('<int:artice_id>/delete/', views.delete, name='delete'),
-
-
-
+    path('<int:article_id>/delete/', views.delete, name='delete'),
 
     # blog/1/edit/
-    path('<int:artice_id>/edit/', views.edit, name='edit'),
+    path('<int:article_id>/edit/', views.edit, name='edit'),
     # blog/1/update/
-    path('<int:artice_id>/update/', views.update, name='update'),
+    path('<int:article_id>/update/', views.update, name='update'),
 ]
 
 """
