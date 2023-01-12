@@ -1,0 +1,6 @@
+{% comment %} 댓글 입력창 {% endcomment %}
+<form action="{% url 'board:comment_create' list.pk %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button>입력</button>
+</form>

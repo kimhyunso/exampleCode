@@ -11,7 +11,6 @@ from .forms import StudentForm
     DELETE => /classroom/create/
 '''
 
-
 # 아래 view 함수는 ~ HTTP method 만 받겠다
 @require_http_methods(['GET', 'POST'])
 def create(request):
@@ -69,3 +68,4 @@ def update(request, student_pk):
         'form' : form,
     }
     return render(request, 'classroom/form.html', context)
+    
