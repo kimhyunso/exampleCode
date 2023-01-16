@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django_extensions',
     # local
     'board',
+    'accounts',
 ]
 
 MIDDLEWARE = [

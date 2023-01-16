@@ -9,7 +9,7 @@
     {% for list in lists %}
     <tr>
         <td>{{list.title}}</td>
-        <td><a href="{% url 'board:board_detail' list.pk %}">{{list.content}}</a>  {{list.comment_set.count}}</td>
+        <td><a href="{% url 'board:board_detail' list.pk %}">{{list.content}}</a>  ({{list.comment_set.count}})</td>
     </tr>
     {% endfor %}
 </table>

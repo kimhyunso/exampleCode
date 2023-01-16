@@ -4,9 +4,11 @@
 {% endfor %} {% endcomment %}
 
 {% for comment in list.comment_set.all  %}
-<form action="{% url 'board:comment_delete' list.pk comment.pk %}" method="post" style="display:inline-block;">
+<form action="{% url 'board:comment_delete' list.pk comment.pk %}" method="post">
     {% csrf_token %}
-    <p>{{comment.content}}</p>
-    <button>삭제</button>
+    <p>{{ comment.user.username }} - {{comment.content}}</p>
+    {% if request.user == comment.user %}
+        <button>삭제</button>
+    {% endif %}
 </form>
 {% endfor %}
