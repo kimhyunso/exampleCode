@@ -14,4 +14,5 @@ urlpatterns = [
     path('<int:board_pk>/', BoardViews.detail, name='board_detail'),
     path('<int:board_pk>/comments/create/', CommentViews.create, name='comment_create'),
     path('<int:board_pk>/comments/<int:comment_pk>/delete/', CommentViews.delete, name='comment_delete'),
+    path('<int:board_pk>/like/', BoardViews.like_board, name='like_board'),
 ]

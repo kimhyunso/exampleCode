@@ -3,7 +3,7 @@
     <p>{{ comment.content }}</p>
 {% endfor %} {% endcomment %}
 
-{% for comment in list.comment_set.all  %}
+{% for comment in list.comments.all  %}
 <form action="{% url 'board:comment_delete' list.pk comment.pk %}" method="post">
     {% csrf_token %}
     <p>{{ comment.user.username }} - {{comment.content}}</p>

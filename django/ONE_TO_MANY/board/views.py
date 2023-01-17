@@ -27,19 +27,29 @@ class BoardViews:
 
     @require_safe
     def index(request):
+        from django.db.models import Count
+        # Article 테이블에 가상의 컬럼(annotate)를 만들며,
+        # 컬럼 이름은 like_count고, like_users를 Count해서 채울 것이며, 이 가상의 컬럼을 기준으로 내림차순정렬하겠다.
+        list = Board.objects.annotate(like_count=Count('like_users')).order_by('-like_count')
         context = {
-            'lists' : Board.objects.order_by('-pk'),
+            'lists' : list,
         }
         return render(request, 'board/index.html', context)
 
     @require_safe
     def detail(request, board_pk):
+        # board 상세페이지 Form
         board = get_object_or_404(Board, pk=board_pk)
+        # comment Form
         form = CommentForm()
+        # 좋아요 버튼 Flag
+        is_like = board.like_users.filter(pk=request.user.pk).exists() 
+        # html에보낼 데이터 꾸러미
         context = {
             'list' : board,
             'form' : form,
-            'comments' : board.comment_set.all()
+            # 'comments' : board.comment_set.all(),
+            'is_like' : is_like,
         }
         return render(request, 'board/detail.html', context)
 
@@ -74,6 +84,15 @@ class BoardViews:
             board.delete()
         return redirect('board:board_index')
 
+    @require_POST
+    @login_required
+    def like_board(request, board_pk):
+        board = get_object_or_404(Board, pk=board_pk)
+        request.user.like_boards.remove(board) if board.like_users.filter(pk=request.user.pk).exists()  else request.user.like_boards.add(board)
+        return redirect('board:board_detail', board_pk)
+
+
+
 class CommentViews:
     @login_required
     @require_http_methods(['POST'])
@@ -98,5 +117,3 @@ class CommentViews:
  
     def delete(request):
         pass
-
-

@@ -6,7 +6,8 @@ class BoardForm(forms.ModelForm):
     class Meta:
         model = Board
         # fields = '__all__'
-        exclude = ('user', )
+        fields = ('title', 'content', )
+        # exclude = ('user', )
 
 class CommentForm(forms.ModelForm):
     content = forms.CharField(min_length=2, max_length=200, widget=forms.TextInput(attrs={'autofocus':True,}))
