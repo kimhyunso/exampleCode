@@ -53,10 +53,11 @@ class Questiones:
 
     @require_safe
     def detail(request, question_pk):
-
+        question = get_object_or_404(Question, pk=question_pk)
+        reply = ReplyForm()
         context = {
-            'list' : get_object_or_404(Question, pk=question_pk),
-            'form' : ReplyForm,
+            'list' : question,
+            'form' : reply,
         }
         return render(request, 'polls/detail.html', context)
 
@@ -98,12 +99,19 @@ class Comment:
 
     @login_required
     @require_http_methods(['POST'])
-    def upvote(request, reply_pk, question_pk):
+    def vote_reply(request, reply_pk, question_pk):
+        # TODO: urls.py에서 url pattern/함수명 바꾸기 [나중에 해야할일]
+        # FIXME: [당장고쳐야할일]
         reply = get_object_or_404(Reply, pk=reply_pk)
         question = get_object_or_404(Question, pk=question_pk)
-        if request.user != reply.user:
-            reply.vote += 1
-            form = reply.save()
+        # 답변 작성자는 좋아요 투표못함
+        if request.user == reply.user:
+            return HttpResponseForbidden('자추금지')
+        
+        if reply.is_voted(request.user):
+            reply.vote_users.remove(request.user)
+        else:
+            reply.vote_users.add(request.user)
         return redirect('polls:question_detail', question.pk)
 
 

@@ -14,5 +14,5 @@ urlpatterns = [
     path('<int:question_pk>/delete/', Question.delete, name='question_delete'),
     path('<int:question_pk>/replies/create/', Comment.create, name='reply_create'),
     path('<int:question_pk>/replies/<int:reply_pk>/delete/', Comment.delete, name='reply_delete'),
-    path('<int:question_pk>/replies/<int:reply_pk>/upvote/', Comment.upvote, name='reply_upvote'),
+    path('<int:question_pk>/replies/<int:reply_pk>/vote/', Comment.vote_reply, name='vote_reply'),
 ]

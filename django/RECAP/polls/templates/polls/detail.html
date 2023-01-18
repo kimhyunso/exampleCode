@@ -1,8 +1,14 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load polls_extra %}
 
 {% block content %}
+
+<img src="{% static 'tree.jpg' %}" alt="tree">
+
+
 <h1>{{list.title}}</h1>
-<p>by - {{list.user}}</p>
+<p>by - <a href="{% url 'accounts:profile' list.user %}">{{list.user}}</a></p>
 {{list.user.mbti}}
 
 {% if request.user == question.user %}
@@ -18,21 +24,29 @@
     </form>
 </div>
 {% endif %}
-
+{% if request.user.is_authenticated %}
 <form action="{% url 'polls:reply_create' list.pk %}" method="post">
     {% csrf_token %}
     {{form.as_p}}
     <button>댓글달기</button>
 </form>
+{% endif %}
 
 <ul>
-    {% for comment in list.reply_set.all  %}
+    {% for comment in list.replies.all  %}
     <li>
-        {{comment.content}} - ({{comment.vote}}) by-{{comment.user}}
+        {{comment.content}} - ({{comment.vote_users.count}}) by-<a href="{% url 'accounts:profile' comment.user %}">{{comment.user}}</a>
         {% if request.user != comment.user %}
-        <form action="{% url 'polls:reply_upvote' list.pk comment.pk %}" method="post" style="display:inline-block;">
+        <form action="{% url 'polls:vote_reply' list.pk comment.pk %}" method="post" style="display:inline-block;">
             {% csrf_token %}
+            {% comment %} TODO: 고치기 {% endcomment %}
+            {% check_user_voted comment request.user as flag %}
+            {% comment %} {% if request.user in comment.vote_users.all %} {% endcomment %}
+            {% if flag %}
+            <button>-1</button>
+            {% else %}
             <button>+1</button>
+            {% endif %}
         </form>
         {%else%}
         <form action="{% url 'polls:reply_delete' list.pk comment.pk %}" method="post" style="display:inline-block;">

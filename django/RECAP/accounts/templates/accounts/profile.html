@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{{profile_user.username}}'s Profile Page / MBTI {{profile_user.mbti}}</h1>
+    <h2>I가 팔로워한 수 : {{I_count}}</h2>
+    <h2>E가 팔로워한 수 : {{E_count}}</h2>
+
+    <div>
+        팔로워 수: {{profile_user.fans.count}}
+        팔로잉 수: {{profile_user.fans.count}}
+        {% comment %} 로그인이 되어있으면 보여주고 로그인한 사람이 자기자신이면 안보여준다. {% endcomment %}
+        {% if request.user.is_authenticated and request.user != profile_user %}
+        <form action="{% url 'accounts:follow' profile_user.username %}" method="post">
+            {% csrf_token %}
+            {% if is_following %}
+            <button>Unfollow</button>
+            {% else %}
+            <button>Follow</button>
+            {% endif %}
+        </form>
+        {% endif %}
+    </div>
+    <h2>작성한 Question 목록</h2>
+    <ul>
+        {% for list in profile_user.question_set.all %}
+        <li><a href="{% url 'polls:question_detail' list.pk %}">{{list.title}}</a></li>
+        {% endfor %}
+    </ul>
+    <h2>작성한 Reply 목록</h2>
+    <ul></ul>
+    {% for reply in profile_user.replies.all %}
+    <li><a href="{% url 'polls:question_detail' reply.question.pk %}">{{reply.title}}</a></li>
+    {% endfor %}
+
+
+{% endblock content %}
