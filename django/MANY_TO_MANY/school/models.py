@@ -22,6 +22,7 @@ class Enrollment(models.Model):
     lecture = models.ForeignKey(Lecture, on_delete=models.CASCADE)
     student = models.ForeignKey(Student, on_delete=models.CASCADE)
     major = models.CharField(max_length=5)
+    models.TextField
     def __str__(self):
         return f'#{self.lecture} <=> {self.student}'
 
