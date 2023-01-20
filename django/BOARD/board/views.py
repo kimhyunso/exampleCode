@@ -43,7 +43,7 @@ def board_delete(request, board_pk):
 
 @require_http_methods(['POST', 'GET'])
 def board_create(request):
-    if request.method == 'POST':
+    if request.method == 'POST': 
         form = BoardForm(request.POST)
         if form.is_valid():
             board = form.save()
