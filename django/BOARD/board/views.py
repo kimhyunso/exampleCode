@@ -34,7 +34,7 @@ def board_update(request, board_pk):
         'form' : form,
     }
     return render(request, 'board/update.html', context)
-
+ 
 @require_http_methods(['POST'])
 def board_delete(request, board_pk):
     board = get_object_or_404(Board, pk=board_pk)
