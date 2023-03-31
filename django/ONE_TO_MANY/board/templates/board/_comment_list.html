@@ -1,0 +1,14 @@
+{% comment %} 댓글 목록 조회(댓글 삭제) {% endcomment %}
+{% comment %} {% for comment in comments %}
+    <p>{{ comment.content }}</p>
+{% endfor %} {% endcomment %}
+
+{% for comment in list.comments.all  %}
+<form action="{% url 'board:comment_delete' list.pk comment.pk %}" method="post">
+    {% csrf_token %}
+    <p>{{ comment.user.username }} - {{comment.content}}</p>
+    {% if request.user == comment.user %}
+        <button>삭제</button>
+    {% endif %}
+</form>
+{% endfor %}

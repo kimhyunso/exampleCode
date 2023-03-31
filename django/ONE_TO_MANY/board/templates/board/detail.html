@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}
+    Detail
+{% endblock title %}
+
+{% block content %}
+
+<h1>{{ list.title }}</h1>
+<p>by - {{ list.user.username }}</p>
+<p>{{ list.content }}</p>
+{% if request.user.is_authenticated %}
+<form action="{% url 'board:like_board' list.pk %}" method="post">
+    {% csrf_token %}
+    {% if is_like %}
+    <button>싫어요 :(</button>
+    {% else %}
+    <button>좋아요b</button>
+    {% endif %}
+    <span>+{{list.like_users.count}}</span>
+</form>
+{% endif %}
+{% if request.user == list.user %}
+<a href="{% url 'board:board_update' list.pk %}">
+    <button>수정</button>
+</a>
+<form action="{% url 'board:board_delete' list.pk %}" method="post">
+    {% csrf_token %}
+    <button onclick="return confirm('정말삭제하시겠습니까?');">삭제</button>
+</form>
+
+
+{% endif %}
+
+{% if request.user.is_authenticated %}
+{% include './_comment_form.html' %}
+{% endif %}
+{% include './_comment_list.html' %}
+
+{% endblock content %}
+
+
+

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<table>
+    <tr>
+        <td>Title</td>
+        <td>Content</td>
+    </tr>
+
+    {% for list in lists %}
+    <tr>
+        <td>{{list.title}}</td>
+        <td><a href="{% url 'board:board_detail' list.pk %}">{{list.content}}</a>  ({{list.comments.count}})</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock content %}

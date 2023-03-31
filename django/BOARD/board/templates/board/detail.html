@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    상세보기
+{% endblock title %}
+
+
+{% block content %}
+    <h1>Detail View</h1>
+
+    {{list.title}}
+    {{list.content}}
+    {{list.writer}}
+    {{list.create_at}}
+
+    <a href="{% url 'board:board_index' %}">
+        <button>목록보기</button>
+    </a>
+    <a href="{% url 'board:board_update' list.pk %}">
+        <button>
+            수정하기
+        </button>
+    </a>
+    <form action="{% url 'board:board_delete' list.pk %}" method="post">
+        {% csrf_token %}
+        <button onclick="return confirm('삭제하시겠습니까?');">삭제하기</button>
+    </form>
+{% endblock content %}
+
+
+
