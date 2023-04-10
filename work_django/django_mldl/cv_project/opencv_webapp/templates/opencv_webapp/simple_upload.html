@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Upload your image file.</h1>
+
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form.as_p}}
+      {% comment %} <input type="hidden" name="product_selected" value="{{product_id}}"> {% endcomment %}
+
+      <button type="submit">Uploads</button>
+    </form>
+
+    {% if uploaded_file_url %}
+      <img src="{{uploaded_file_url}}" alt="이미지">
+      <p>Uploaded file @ : <a href="{{ uploaded_file_url }}">{{uploaded_file_url}}</a></p>
+    {% endif %}
+
+    <p><a href="{% url 'opencv_webapp:simple_upload' %}", name='simple_upload'>Return to Home</a></p>
+
+  </body>
+</html>
