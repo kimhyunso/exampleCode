@@ -125,6 +125,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+MEDIA_ROOT_URL = '.'
+
 # index.css 추가했을 때,
 # -> www.gscmldl.com/static/index.css URL로 일반 유저가 접근 가능
 

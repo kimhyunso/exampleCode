@@ -1,0 +1,28 @@
+﻿
+1. 장고 메인폴더 생성하고 들어가기 @ cmd (관리자권한으로 실행)
+
+- cd .. 명령어로 c drive까지 나가기 
+- mkdir work_django -> work_django 폴더가 생깁니다.
+- cd work_django
+- mkdir django_mldl-> django_mldl 폴더가 생깁니다.
+- cd django_mldl
+
+
+2. 위에서 만든 "django_mldl" 폴더 안에 "mldl_project" 폴더를 위치시킵니다.
+
+
+3. 가상환경 생성하고 활성화하기
+
+- pip install virtualenv==20.13.2 -> 가상 환경을 만들어주는 라이브러리입니다.
+- virtualenv django_env -> django_env 라는 이름으로 가상 환경을 새로이 만듭니다.
+- django_env\Scripts\activate -> Scripts 폴더 내의 activate 파일을 실행해 가상 환경을 활성화합니다. 
+
+
+4. 필수 라이브러리 설치하고 서버 켜기
+
+- cd mldl_project 
+- pip install -r requirements.txt 
+- python manage.py runserver
+
+
+5. Atom 에서 "mldl_project" 폴더를 열어 코드를 살피고 활용합니다.
