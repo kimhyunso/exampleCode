@@ -41,6 +41,7 @@ def board_delete(request, board_pk):
     board.delete()
     return redirect('board:board_index')
 
+
 @require_http_methods(['POST', 'GET'])
 def board_create(request):
     if request.method == 'POST': 
