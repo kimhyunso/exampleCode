@@ -14,7 +14,10 @@
 .settings/
 .metadata/
 .idea/
-
+*.pdf
+*.png
+*.jpg
+*.gif
 
 # Package Files #
 *.jar
