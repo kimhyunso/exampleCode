@@ -13,6 +13,7 @@
 .mtj.tmp/
 .settings/
 .metadata/
+.idea/
 
 
 # Package Files #
